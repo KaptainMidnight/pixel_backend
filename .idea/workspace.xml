@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fef9f619-dd4d-4bde-a934-653700fad0cd" name="Default Changelist" comment="" />
+    <list default="true" id="fef9f619-dd4d-4bde-a934-653700fad0cd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -12,6 +19,23 @@
     <execution>
       <executable path="composer" />
     </execution>
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PackageJsonUpdateNotifier">
     <dismissed value="$PROJECT_DIR$/package.json" />
@@ -120,16 +144,19 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1adWBzhzRp1ShNkqVqIgjlNZgPV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlite" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -158,6 +185,12 @@
       <workItem from="1587106082005" duration="733000" />
       <workItem from="1587112551956" duration="114000" />
       <workItem from="1587115948776" duration="35000" />
+      <workItem from="1587139532753" duration="138000" />
+      <workItem from="1587226117034" duration="1700000" />
+      <workItem from="1587228820754" duration="1367000" />
+      <workItem from="1587235871353" duration="173000" />
+      <workItem from="1587314533853" duration="1047000" />
+      <workItem from="1587316374005" duration="366000" />
     </task>
     <servers />
   </component>
@@ -165,14 +198,18 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="283" y="49" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1587227600777">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="283" y="49" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.768@0.0.1366.768" timestamp="1587227600777" />
     <state x="452" y="304" key="ComposerInitDialogKey" timestamp="1587067182811">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="452" y="304" key="ComposerInitDialogKey/0.0.1366.768@0.0.1366.768" timestamp="1587067182811" />
-    <state x="192" y="23" key="SettingsEditor" timestamp="1587102211357">
+    <state x="192" y="23" key="SettingsEditor" timestamp="1587315281324">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="192" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1587102211357" />
+    <state x="192" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1587315281324" />
     <state x="348" y="92" width="670" height="676" key="search.everywhere.popup" timestamp="1587115960652">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
