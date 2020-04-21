@@ -4,15 +4,26 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
     /**
+     * Create a new PostController instance
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth:api', ['except' => 'list']);
+    }
+
+    /**
      * Create the user post
      *
      * @param Request $request
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
     public function create(Request $request)
     {
@@ -30,9 +41,9 @@ class PostController extends Controller
     /**
      * Get all posts created user
      *
-     * @return \Illuminate\Http\JsonResponse
+     * @return JsonResponse
      */
-    public function list()
+    public function listAuth()
     {
         $data = [];
         foreach (auth()->user()->posts as $post) {
@@ -40,5 +51,15 @@ class PostController extends Controller
         }
 
         return response()->json($data);
+    }
+
+    /**
+     * Get all posts
+     *
+     * @return JsonResponse
+     */
+    public function list()
+    {
+        return response()->json(Post::all());
     }
 }

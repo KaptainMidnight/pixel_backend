@@ -30,9 +30,6 @@ Route::group(['prefix' => 'friend', 'middleware' => 'auth:api'], function() {
 
 Route::group(['prefix' => 'post', 'middleware' => 'auth:api'], function() {
    Route::post('create', 'PostController@create');
-   Route::get('list', 'PostController@list');
-});
-
-Route::group(['prefix' => 'user', 'middleware' => 'auth:api'], function() {
-   Route::post('upload', 'UserController@upload');
+   Route::get('list', 'PostController@lilistAuthst');
+   Route::get('all', 'PostController@list');
 });
