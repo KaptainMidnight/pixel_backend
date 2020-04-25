@@ -21,10 +21,12 @@
   <component name="ChangeListManager">
     <list default="true" id="fef9f619-dd4d-4bde-a934-653700fad0cd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FriendController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_17_054609_create_friendships_table.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_04_17_054610_create_friendships_groups_table.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/channels.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/channels.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,6 +219,11 @@
       <workItem from="1587316374005" duration="366000" />
       <workItem from="1587376061453" duration="2850000" />
       <workItem from="1587386837478" duration="745000" />
+      <workItem from="1587538422172" duration="3129000" />
+      <workItem from="1587543109713" duration="2316000" />
+      <workItem from="1587646588246" duration="1708000" />
+      <workItem from="1587723369846" duration="791000" />
+      <workItem from="1587803076693" duration="3548000" />
     </task>
     <servers />
   </component>
@@ -244,17 +251,21 @@
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="410" y="193" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.768@0.0.1366.768" timestamp="1587383083972" />
+    <state x="421" y="146" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1587807861971">
+      <screen x="0" y="0" width="1366" height="768" />
+    </state>
+    <state x="421" y="146" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1366.768@0.0.1366.768" timestamp="1587807861971" />
     <state x="452" y="304" key="ComposerInitDialogKey" timestamp="1587067182811">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
     <state x="452" y="304" key="ComposerInitDialogKey/0.0.1366.768@0.0.1366.768" timestamp="1587067182811" />
-    <state x="192" y="23" key="SettingsEditor" timestamp="1587378915558">
+    <state x="192" y="23" key="SettingsEditor" timestamp="1587806797691">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="192" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1587378915558" />
-    <state x="348" y="92" width="670" height="676" key="search.everywhere.popup" timestamp="1587383118605">
+    <state x="192" y="23" key="SettingsEditor/0.0.1366.768@0.0.1366.768" timestamp="1587806797691" />
+    <state x="348" y="92" width="670" height="676" key="search.everywhere.popup" timestamp="1587828943159">
       <screen x="0" y="0" width="1366" height="768" />
     </state>
-    <state x="348" y="92" width="670" height="676" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1587383118605" />
+    <state x="348" y="92" width="670" height="676" key="search.everywhere.popup/0.0.1366.768@0.0.1366.768" timestamp="1587828943159" />
   </component>
 </project>

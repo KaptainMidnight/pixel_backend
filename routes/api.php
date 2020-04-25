@@ -22,14 +22,21 @@ Route::group(['prefix' => 'auth'], function() {
 });
 
 Route::group(['prefix' => 'friend', 'middleware' => 'auth:api'], function() {
-    Route::post('send', 'FriendController@send');
-    Route::post('accept', 'FriendController@accept');
-    Route::post('pending', 'FriendController@getAllFriendships');
-    Route::post('unfriend', 'FriendController@unFriend');
+    Route::get('dashboard', 'FriendController@dashboard');
+    Route::get('send/{id}', 'FriendController@getAddFriend');
 });
 
 Route::group(['prefix' => 'post', 'middleware' => 'auth:api'], function() {
    Route::post('create', 'PostController@create');
-   Route::get('list', 'PostController@lilistAuthst');
    Route::get('all', 'PostController@list');
+});
+
+Route::group(['prefix' => 'friends', 'middleware' => 'auth:api'], function() {
+    Route::post('send', 'FriendController@send');
+    Route::post('deny', 'FriendController@deny');
+    Route::get('all', 'FriendController@friends');
+});
+
+Route::group(['prefix' => 'users', 'middleware' => 'auth:api'], function() {
+   Route::get('list', 'UserController@list');
 });

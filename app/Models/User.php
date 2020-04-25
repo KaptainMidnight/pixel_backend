@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Hootlex\Friendships\Traits\Friendable;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Tymon\JWTAuth\Contracts\JWTSubject;
@@ -28,7 +27,12 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
+        'created_at',
+        'updated_at',
+        'email',
+        'email_verified_at'
     ];
 
     /**
@@ -66,15 +70,5 @@ class User extends Authenticatable implements JWTSubject
     public function posts()
     {
         return $this->hasMany(Post::class);
-    }
-
-    /**
-     * Get user image
-     *
-     * @return mixed
-     */
-    public function getImageAttribute()
-    {
-        return $this->avatar;
     }
 }

@@ -2,12 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function upload(Request $request)
+    /**
+     * Response all users
+     *
+     * @return JsonResponse
+     */
+    public function list()
     {
-        $image = $request->get('image');
+        return response()->json(User::query()->where('id', '<>', auth()->user()->id)->get());
     }
 }

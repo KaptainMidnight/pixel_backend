@@ -16,9 +16,10 @@ class FriendController extends Controller
      */
     public function send(Request $request)
     {
-        $sender = User::query()->find(auth()->user()->id);
-        $recipient = User::query()->findOrFail($request->post('recipient_id'));
-        $sender->befriend($recipient);
+        $sender_id = User::query()->find(auth()->user()->id);
+        $recipient_id = User::query()->findOrFail($request->post('recipient_id'));
+
+        $sender_id->befriend((int)$recipient_id);
 
         return response()->json([
             'message' => 'Sended'
@@ -26,70 +27,30 @@ class FriendController extends Controller
     }
 
     /**
-     * Accept user request
+     * Deny friend request
      *
      * @param Request $request
      * @return JsonResponse
      */
-    public function accept(Request $request)
+    public function deny(Request $request)
     {
-        $user = User::query()->find(auth()->user()->id);
-        $sender = User::query()->findOrFail($request->get('sender_id'));
+        $sender_id = $request->post('sender_id');
+        $recipient_id = auth()->user()->id;
 
-        $user->acceptFriendRequest($sender);
+        $recipient_id->denyFriendRequest($sender_id);
 
         return response()->json([
-            'message' => 'Accepted'
+            'message' => 'Denied'
         ]);
     }
 
     /**
-     * Get all accepted friendships
+     * Get all friendships
      *
      * @return JsonResponse
      */
-    public function getAllFriendships()
+    public function friends()
     {
-        $sender = User::query()->find(auth()->user()->id);
-
-        return response()->json($sender->getFriends());
-    }
-
-    /**
-     * Leave it to subscribers
-     *
-     * @param Request $request
-     * @return JsonResponse
-     */
-    public function denyFriendRequest(Request $request)
-    {
-        $recipient = User::query()->findOrFail(auth()->user()->id);
-        $sender = $request->post('sender_id');
-
-        $recipient->denyFriendRequest($sender);
-
-        return response()->json([
-            'message' => 'Denied!',
-            'code' => 200,
-        ]);
-    }
-
-    /**
-     * Move user in subscribers
-     *
-     * @param Request $request
-     * @return JsonResponse
-     */
-    public function unFriend(Request $request)
-    {
-        $user = auth()->user()->id;
-        $recipient = $request->post('recipient_id');
-
-        $user->unfriend($recipient);
-
-        return response()->json([
-            'message' => 'Unfriended!',
-            'code' => 200,
-        ]);
+        return response()->json(auth()->user()->getFriends());
     }
 }
